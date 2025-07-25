@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from rag_qa_module import ask_question  # ← on importe ta fonction directement
+from rag_qa_module import ask_question  
 
 app = FastAPI()
 
