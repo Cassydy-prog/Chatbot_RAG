@@ -17,3 +17,12 @@ __pycache__/
 *.faiss
 .DS_Store
 RAG_Part1.ipynb
+
+.env
+PDFs/
+__pycache__/
+vectorstore_ecole/
+scraping.log
+*.ipynb_checkpoints/
+*.faiss
+*.pkl
