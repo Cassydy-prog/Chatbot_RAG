@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Données
+corpus_ecole.txt
+replace.txt
+scraping.log
+
+# Dossiers à ignorer
+PDFs/
+vectorstore_ecole/
+__pycache__/
+
+# Fichiers système
+*.pyc
+*.pkl
+*.faiss
+.DS_Store
+RAG_Part1.ipynb
