@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from rag_qa_module import ask_question  # ← on importe ta fonction directement
+from rag_qa_module import ask_question  
 
 app = FastAPI()
 
@@ -19,3 +19,7 @@ async def query_rag(request: QuestionRequest):
     """
     response = ask_question(request.question)
     return {"response": response}
+
+@app.get("/healthz")
+async def health_check():
+    return {"status": "ok"}

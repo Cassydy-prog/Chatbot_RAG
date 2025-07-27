@@ -3,10 +3,11 @@ FROM python:3.9-slim
 WORKDIR /app
 
 COPY requirements.txt .
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY rag_qa_module.py .
-COPY vectorstore_ecole/ ./vectorstore_ecole/
+COPY . .
 
-CMD ["python", "rag_qa_module.py"]
+# Debug : voir les fichiers copiés
+RUN ls -l /app
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

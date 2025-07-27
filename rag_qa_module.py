@@ -31,3 +31,9 @@ def build_rag_pipeline(vectorstore):
         return_source_documents=False
     )
     return rag_chain
+
+def ask_question(question):
+    vectorstore = load_vectorstore()
+    rag_chain = build_rag_pipeline(vectorstore)
+    result = rag_chain.invoke(question)
+    return result["result"]
