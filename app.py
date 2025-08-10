@@ -7,7 +7,7 @@ from rag_qa_module import ask_question
 
 app = FastAPI()
 
-origins = ["*"]  
+origins = ["https://site-hs4wh.powerappsportals.com"]  
 
 app.add_middleware(
     CORSMiddleware,
